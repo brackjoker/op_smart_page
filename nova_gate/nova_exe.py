@@ -8,6 +8,16 @@ from nova import nova
 
 def getlist(req):
 
+    if req.method == "POST":
+        body_byt = req.body
+        rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
+
+        if rest_obj['type'] == "info":
+            print("get info")
+
+        else:
+            print("command")
+
     opbase_obj = openstack_base
     opbase_obj.password = 'admin'
     opbase_obj.username = 'admin'

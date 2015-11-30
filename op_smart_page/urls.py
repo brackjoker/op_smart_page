@@ -19,7 +19,7 @@ from django.contrib import admin
 urlpatterns = patterns('',
     url(r'^view/$', 'nova_gate.views.main', name='view'),
     url(r'^nova_get/$', 'nova_gate.nova_exe.getlist', name='nova_get'),
-
+    url(r'^cmd_op/$', 'cmd_exe.cmd_op.cmd_exec', name='cmd_op'),
 )
 
 """
