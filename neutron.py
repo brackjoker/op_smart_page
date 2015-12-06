@@ -5,14 +5,14 @@ import json
 from openstack_base import openstack_base
 
 
-class nova:
+class neutron:
 
     result_json = {}
 
     @classmethod
     def getlist(self,ops_base_obj):
 
-        url = 'http://'+ops_base_obj.openstack_ip+':8774/v2/'+ops_base_obj.tenantid+'/servers/detail'
+        url = 'http://'+ops_base_obj.openstack_ip+':9696/v2.0/networks'
         body = ''
         h = httplib2.Http(timeout=30)
         headers = {'X-Auth-Token': ops_base_obj.tokenid}

@@ -18,8 +18,8 @@ from django.contrib import admin
 
 urlpatterns = patterns('',
     url(r'^view/$', 'nova_gate.views.main', name='view'),
-    url(r'^nova_get/$', 'nova_gate.nova_exe.getlist', name='nova_get'),
-    url(r'^cmd_op/$', 'cmd_exe.cmd_op.cmd_exec', name='cmd_op'),
+    url(r'^op_get_info/$', 'op_get_info.op_get_info.getlist', name='op_get_info'),
+    url(r'^cmd_op/$', 'cmd_exe.cmd_operation.ops_cmd_exec', name='cmd_op'),
 )
 
 """

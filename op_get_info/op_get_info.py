@@ -1,22 +1,11 @@
 from django.http import JsonResponse
 import sys
-import httplib2
 import json
 from openstack_base import openstack_base
 from nova import nova
 
 
 def getlist(req):
-
-    if req.method == "POST":
-        body_byt = req.body
-        rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
-
-        if rest_obj['type'] == "info":
-            print("get info")
-
-        else:
-            print("command")
 
     opbase_obj = openstack_base
     opbase_obj.password = 'okinawa1940'
@@ -26,7 +15,20 @@ def getlist(req):
     opbase_obj.openstack_ip = '192.168.151.202'
     opbase_obj.get_token()
     opbase_obj.get_tenant_id()
-    nova.getlist(opbase_obj)
+
+    if req.method == "POST":
+        body_byt = req.body
+        rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
+
+        if rest_obj['type'] == "nova":
+            nova.getlist(opbase_obj)
+
+
+        elif rest_obj['type'] == "neutron":
+            print("command")
+
+
+
 
     content = {"rest": "OK"}
 

@@ -1,5 +1,5 @@
 import subprocess
-
+import re
 
 class comand_operation:
 
@@ -20,13 +20,13 @@ class comand_operation:
 
     @classmethod
     def chk_str_ascii(self,str):
-        regexp = str.compile(r'^[\x20-\x7E]+$')
-        result = regexp.search(" abcdefghijklmnopqrstuvwxyz!#$&'()[]@")
+        regexp = re.compile(str)
+        result = regexp.search(" abcdefghijklmnopqrstuvwxyz!#$&'-*()[]@")
         return_res = False
-        if result != None :
-            return_res = True
-        else :
+        if result == None :
             return_res = False
+        else :
+            return_res = True
         return return_res
 
     @classmethod
