@@ -22,9 +22,16 @@ class nova:
         toke_body = token_body_byt.decode(sys.stdin.encoding)
         self.server_all_info = json.loads(toke_body)
 
-    def get_server_info(self,json_obj):
-        for server_list in json_obj['servers']:
+    def get_server_status(self,inst_name):
+        inst_status = ""
+        for server_list in self.server_all_info['servers']:
+            if str(server_list['name']) == inst_name:
+                inst_status = {"status": str(server_list['status'])}
+                break
 
+        return inst_status
+
+"""
             self.result_json = {"servers":[{str(server_list['name']):
                                                 {"server_name": str(server_list['name']),
                                                  "status": str(server_list['status']),
@@ -32,3 +39,4 @@ class nova:
                                                  }
                                             }]
                                 }
+"""
