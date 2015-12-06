@@ -4,6 +4,7 @@ import json
 from openstack_base import openstack_base
 from nova import nova
 from neutron import neutron
+from flavor import flavor
 
 def getlist(req):
 
@@ -29,6 +30,14 @@ def getlist(req):
             neutron_obj = neutron
             neutron_obj.getlist(opbase_obj)
             content = neutron_obj.server_all_info
+
+        elif rest_obj['info_type'] == "flavor":
+            flavor_obj = flavor
+            flavor_obj.getlist(opbase_obj)
+            content = flavor_obj.server_all_info
+
+        else:
+            content = {"massage": "ERROR: none info type"}
 
     return JsonResponse(content)
 
