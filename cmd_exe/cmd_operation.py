@@ -17,7 +17,7 @@ def ops_cmd_exec(req):
         cmd_obj.cmd_str = str(rest_obj['command'])
         cmd_obj.os_auth_url = 'http://192.168.151.202:35357/v2.0'
         cmd_obj.os_username = 'admin'
-        cmd_obj.os_password = 'admin'
+        cmd_obj.os_password = 'okinawa1940'
         cmd_obj.os_tenant_name = 'admin'
 
         cmd_obj.make_op_env_val()
