@@ -15,24 +15,20 @@ def getlist(req):
     opbase_obj.openstack_ip = '192.168.151.202'
     opbase_obj.get_token()
     opbase_obj.get_tenant_id()
+    nova_obj = nova
 
     if req.method == "POST":
         body_byt = req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
 
         if rest_obj['type'] == "nova":
-            nova.getlist(opbase_obj)
+            nova_obj.getlist(opbase_obj)
+            content = nova_obj.server_all_info
 
 
         elif rest_obj['type'] == "neutron":
             print("command")
-
-
-
-
-    content = {"rest": "OK"}
-
-
+            content = {"result": "ok"}
 
     return JsonResponse(content)
 

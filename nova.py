@@ -8,6 +8,7 @@ from openstack_base import openstack_base
 class nova:
 
     result_json = {}
+    server_all_info = {}
 
     @classmethod
     def getlist(self,ops_base_obj):
@@ -19,15 +20,15 @@ class nova:
         resp, token = h.request(url, 'GET', headers=headers, body=body)
         token_body_byt = token
         toke_body = token_body_byt.decode(sys.stdin.encoding)
-        server_info = json.loads(toke_body)
+        self.server_all_info = json.loads(toke_body)
 
-        for server_list in server_info['servers']:
+    def get_server_info(self,json_obj):
+        for server_list in json_obj['servers']:
 
-            result_json = {"server_name": str(server_list['name']),"nova_host": str(server_list['OS-EXT-SRV-ATTR:host']),"network":[]}
-            print("server name: ",str(server_list['name']))
-            print("nova host: ",str(server_list['OS-EXT-SRV-ATTR:host']))
-            i=0
-            for network_obj in server_list['addresses']:
-                result_json.update({"network":[{"address" : network_obj}]})
-                print(network_obj)
-                i = i + 1
+            self.result_json = {"servers":[{str(server_list['name']):
+                                                {"server_name": str(server_list['name']),
+                                                 "status": str(server_list['status']),
+                                                 "nova_host": str(server_list['OS-EXT-SRV-ATTR:host'])
+                                                 }
+                                            }]
+                                }
