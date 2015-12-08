@@ -5,6 +5,8 @@ from openstack_base import openstack_base
 from nova import nova
 from neutron import neutron
 from flavor import flavor
+from glance import glance
+from keystone import keystone
 
 def getlist(req):
 
@@ -13,7 +15,7 @@ def getlist(req):
     opbase_obj.username = 'admin'
     opbase_obj.tenantname = 'admin'
 
-    opbase_obj.openstack_ip = '192.168.151.202'
+    opbase_obj.openstack_ip = '192.168.11.22'
     opbase_obj.get_token()
     opbase_obj.get_tenant_id()
 
@@ -27,7 +29,7 @@ def getlist(req):
 
             if rest_obj['info_type'] == "all_info":
                 content = nova_obj.server_all_info
-            else:
+            elif rest_obj['info_type'] == "inst_status":
                 content = nova_obj.get_server_status(str(rest_obj['target_name']))
 
         elif rest_obj['node_type'] == "neutron":
@@ -39,6 +41,16 @@ def getlist(req):
             flavor_obj = flavor
             flavor_obj.getlist(opbase_obj)
             content = flavor_obj.server_all_info
+
+        elif rest_obj['node_type'] == "glance":
+            glance_obj = glance
+            glance_obj.getlist(opbase_obj)
+            content = glance_obj.server_all_info
+
+        elif rest_obj['node_type'] == "keystone":
+            keystone_obj = keystone
+            keystone_obj.getlist(opbase_obj)
+            content = keystone_obj.server_all_info
 
         else:
             content = {"massage": "ERROR: none info type"}
