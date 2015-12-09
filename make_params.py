@@ -15,6 +15,7 @@ class make_params:
     image_id = ""
     flavor_num = ""
     network_id = ""
+    server_id = ""
 
     @classmethod
     def get_flavor_ref(self, flavor_name):
@@ -51,7 +52,24 @@ class make_params:
                 break
 
     @classmethod
-    def create_value(self, nova_obj, flavor_name, image_name, network_name):
+    def get_server_id(self, nova_name):
+
+        nova_obj = nova
+        nova_obj.getlist(self.opbase_obj)
+        nova_info = nova_obj.server_all_info
+        for nova_element in nova_info['servers']:
+            if str(nova_element['name']) == nova_name:
+                self.server_id = str(nova_element['id'])
+                break
+
+    @classmethod
+    def delete_value_get(self, nova_obj,server_name):
+        self.get_server_id(server_name)
+        nova_obj.server_id = self.server_id
+
+
+    @classmethod
+    def create_value_get(self, nova_obj, flavor_name, image_name, network_name):
 
         self.get_flavor_ref(flavor_name)
         self.get_image_id(image_name)

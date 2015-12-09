@@ -30,7 +30,7 @@ def getlist(req):
             if rest_obj['info_type'] == "all_info":
                 content = nova_obj.server_all_info
             elif rest_obj['info_type'] == "inst_status":
-                content = nova_obj.get_server_status(str(rest_obj['target_name']))
+                content = nova_obj.get_server_status(rest_obj['target_name'])
 
         elif rest_obj['node_type'] == "neutron":
             neutron_obj = neutron
