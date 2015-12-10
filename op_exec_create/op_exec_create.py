@@ -29,7 +29,7 @@ def exec_create(req):
                 params_obj.opbase_obj = opbase_obj
                 params_obj.create_value_get(nova_obj, str(rest_obj['flavor_name']), str(rest_obj['image_name']), str(rest_obj['network_name']))
                 #nova_obj.create_value()
-                nova_obj.server_name = str(rest_obj['sever_name'])
+                nova_obj.server_name = str(rest_obj['server_name'])
                 nova_obj.create_instance(opbase_obj)
                 content = nova_obj.nova_rest_result
 
