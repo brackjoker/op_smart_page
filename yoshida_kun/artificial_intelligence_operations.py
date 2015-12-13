@@ -5,6 +5,9 @@ from openstack_base import openstack_base
 from nova import nova
 from flavor import flavor
 from make_params import make_params
+from text_classifier import text_classifier
+from cmd_op import comand_operation
+
 
 def exec_operation(req):
 
@@ -13,9 +16,9 @@ def exec_operation(req):
     opbase_obj.username = 'admin'
     opbase_obj.tenantname = 'admin'
 
-    opbase_obj.openstack_ip = '192.168.249.197'
-    opbase_obj.get_token()
-    opbase_obj.get_tenant_id()
+    #opbase_obj.openstack_ip = '192.168.249.197'
+    #opbase_obj.get_token()
+    #opbase_obj.get_tenant_id()
 
     target_flavor_id = ""
     network_id = ""
@@ -29,13 +32,24 @@ def exec_operation(req):
         body_byt = req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         instance_id = rest_obj['instance_id']
-
+        cmd = text_classifier.exec_tensor()
 #        content = exec_rebuild(opbase_obj,instance_id)
-        content = {
-                    'instance_id': instance_id,
-                    'massage': "rebuild sccess"
-                   }
+        cmd = cmd
 
+        cmd_obj = comand_operation
+        cmd_obj.cmd_str = str(cmd)
+        cmd_obj.os_auth_url = 'http://192.168.249.197:35357/v2.0'
+        cmd_obj.os_username = 'admin'
+        cmd_obj.os_password = 'admin'
+        cmd_obj.os_tenant_name = 'admin'
+
+        cmd_obj.make_op_env_val()
+        cmd_obj.cmd_exec()
+
+    content = {
+                'massage': cmd_obj.cmd_out_std,
+                'err_massage': cmd_obj.cmd_err_std
+               }
 
     return JsonResponse(content)
 
@@ -61,7 +75,6 @@ def exec_rebuild(opbase_obj,instance_id):
 
     #get flavor name
     flavor_name = "m1.tiny"
-
 
     print "netwoekID serch function"
     net_name = "public"
