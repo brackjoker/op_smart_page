@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     url(r'^op_get_info/$', 'op_get_info.op_get_info.getlist', name='op_get_info'),
     url(r'^op_exec_create/$', 'op_exec_create.op_exec_create.exec_create', name='op_exec_create'),
     url(r'^op_exec_delete/$', 'op_exec_delete.op_exec_delete.exec_delete', name='op_exec_delete'),
+    url(r'^yoshida_kun/$', 'yoshida_kun.dumy_tensor_flow.exec_operation', name='yoshida_kun'),
     url(r'^cmd_op/$', 'cmd_exe.cmd_operation.ops_cmd_exec', name='cmd_op'),
 )
 

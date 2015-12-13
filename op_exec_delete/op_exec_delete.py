@@ -27,8 +27,14 @@ def exec_delete(req):
             if rest_obj['exec_type'] == "inst_delete":
                 params_obj = make_params
                 params_obj.opbase_obj = opbase_obj
-                params_obj.delete_value_get(nova_obj, str(rest_obj['server_name']))
+                if "server_name" in rest_obj:
+                    params_obj.server_name = str(rest_obj['server_name'])
+                    params_obj.delete_value_get(nova_obj)
                 #nova_obj.create_value()
+                else:
+                    params_obj.server_id = str(rest_obj['server_id'])
+                    params_obj.get_server_name(str(rest_obj['server_id']))
+
                 nova_obj.delete_instance(opbase_obj)
                 content = nova_obj.nova_rest_result
 

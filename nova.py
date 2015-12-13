@@ -79,7 +79,7 @@ class nova:
         headers = {'X-Auth-Token': ops_base_obj.tokenid,'Content-Type':'application/json'}
         resp, rest_res = h.request(url, 'DELETE', headers=headers, body=body)
         if "204" == resp.get("status"):
-            self.nova_rest_result = {"result":"success"}
+            self.nova_rest_result = {"server_name": self.server_name,"result":"success"}
         else:
             self.nova_rest_result = {"result":"fail"}
 #        result_body_byt = rest_res
