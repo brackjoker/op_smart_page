@@ -11,11 +11,11 @@ from keystone import keystone
 def getlist(req):
 
     opbase_obj = openstack_base
-    opbase_obj.password = 'okinawa1940'
+    opbase_obj.password = 'admin'
     opbase_obj.username = 'admin'
     opbase_obj.tenantname = 'admin'
 
-    opbase_obj.openstack_ip = '192.168.11.22'
+    opbase_obj.openstack_ip = '192.168.249.197'
     opbase_obj.get_token()
     opbase_obj.get_tenant_id()
 
