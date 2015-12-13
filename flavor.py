@@ -21,3 +21,13 @@ class flavor:
         token_body_byt = token
         toke_body = token_body_byt.decode(sys.stdin.encoding)
         self.server_all_info = json.loads(toke_body)
+
+    def get_name(self,flavor_id):
+
+        flavor_name = ""
+        for flavor_list in self.server_all_info['flavors']:
+            if str(flavor_list['id']) == str(flavor_id):
+                flavor_name = str(flavor_list['name'])
+                break
+
+        return flavor_name
