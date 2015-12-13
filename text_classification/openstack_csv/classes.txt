@@ -1,0 +1,14 @@
+service nova-api restart
+nova list
+service nova-compute restart
+service nova-compute restart
+service nova-compute restart
+service nova-compute restart
+service nova-compute restart
+service nova-compute restart
+service nova-compute restart
+service nova-compute restart
+nova list
+service nova-compute restart
+service nova-compute restart
+service nova-compute restart
