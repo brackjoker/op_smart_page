@@ -30,7 +30,7 @@ def exec_operation(req):
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         instance_id = rest_obj['instance_id']
 
-        #content = exec_rebuild(opbase_obj,instance_id)
+#        content = exec_rebuild(opbase_obj,instance_id)
         content = {
                     'instance_id': instance_id,
                     'massage': "rebuild sccess"
@@ -78,7 +78,9 @@ def exec_rebuild(opbase_obj,instance_id):
 
     print "boot instance"
     params_obj.create_value_get(nova_obj, flavor_name, image_name, net_name)
-
+    nova_obj.server_name = str(params_obj)
+    nova_obj.create_instance(opbase_obj)
+    content = nova_obj.nova_rest_result
     content = {
                 'instance_id': instance_id,
                 'massage': "rebuild sccess"
