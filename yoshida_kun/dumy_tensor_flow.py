@@ -30,7 +30,12 @@ def exec_operation(req):
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         instance_id = rest_obj['instance_id']
 
-        content = exec_rebuild(opbase_obj,instance_id)
+        #content = exec_rebuild(opbase_obj,instance_id)
+        content = {
+                    'instance_id': instance_id,
+                    'massage': "rebuild sccess"
+                   }
+
 
     return JsonResponse(content)
 
