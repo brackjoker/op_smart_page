@@ -1,14 +1,15 @@
 service nova-api restart
-nova list
+service nova-schedular restart
+nova service-list
+glance image-list
+service nova-conductor restart
 service nova-compute restart
+service nova-schedular restart
+service nova-api restart
+service nova-conductor restart
 service nova-compute restart
-service nova-compute restart
-service nova-compute restart
-service nova-compute restart
-service nova-compute restart
-service nova-compute restart
-service nova-compute restart
-nova list
-service nova-compute restart
-service nova-compute restart
-service nova-compute restart
+glance image-list
+neutron net-list
+neutron subnet-list
+nova boot --flavor 1 --nic net-id=%nic --image %image %host
+nova delete %host
