@@ -7,6 +7,7 @@ from flavor import flavor
 from make_params import make_params
 from text_classifier import text_classifier
 from cmd_op import comand_operation
+from file_function import file_function
 
 
 def exec_operation(req):
@@ -32,19 +33,25 @@ def exec_operation(req):
         body_byt = req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         instance_id = rest_obj['instance_id']
-        cmd = text_classifier.exec_tensor()
-#        content = exec_rebuild(opbase_obj,instance_id)
-        cmd = cmd
+        if rest_obj['instance_id'] != "" :
 
-        cmd_obj = comand_operation
-        cmd_obj.cmd_str = str(cmd)
-        cmd_obj.os_auth_url = 'http://192.168.249.197:35357/v2.0'
-        cmd_obj.os_username = 'admin'
-        cmd_obj.os_password = 'admin'
-        cmd_obj.os_tenant_name = 'admin'
+            file_function.make_tensor_file(str(rest_obj['massage1']))
 
-        cmd_obj.make_op_env_val()
-        cmd_obj.cmd_exec()
+            cmd = text_classifier.exec_tensor()
+    #        content = exec_rebuild(opbase_obj,instance_id)
+            cmd = cmd
+
+            if cmd == "none":
+                print 0
+            else:
+                cmd_obj = comand_operation
+                cmd_obj.cmd_str = str(cmd)
+                cmd_obj.os_auth_url = 'http://192.168.249.197:35357/v2.0'
+                cmd_obj.os_username = 'admin'
+                cmd_obj.os_password = 'admin'
+                cmd_obj.os_tenant_name = 'admin'
+                cmd_obj.make_op_env_val()
+                cmd_obj.cmd_exec()
 
     content = {
                 'massage': cmd_obj.cmd_out_std,
