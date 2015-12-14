@@ -17,7 +17,7 @@ def exec_operation(req):
     opbase_obj.username = 'admin'
     opbase_obj.tenantname = 'admin'
 
-    #opbase_obj.openstack_ip = '192.168.249.197'
+    opbase_obj.openstack_ip = '192.168.249.197'
     #opbase_obj.get_token()
     #opbase_obj.get_tenant_id()
 
@@ -33,30 +33,36 @@ def exec_operation(req):
         body_byt = req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         instance_id = rest_obj['instance_id']
-        if rest_obj['instance_id'] != "" :
+#        if str(instance_id) != "" :
 
-            file_function.make_tensor_file(str(rest_obj['massage1']))
+        file_function.make_tensor_file(str(rest_obj['massage1']))
 
-            cmd = text_classifier.exec_tensor()
+        cmd = text_classifier.exec_tensor()
+        cmd = cmd
+
+        if cmd == "none":
+            content = {
+                    'massage': "",
+                    'err_massage': "operation is no command"
+                   }
+        else:
+            cmd_obj = comand_operation
+            cmd_obj.cmd_str = str(cmd)
+            cmd_obj.os_auth_url = 'http://192.168.249.197:35357/v2.0'
+            cmd_obj.os_username = 'admin'
+            cmd_obj.os_password = 'admin'
+            cmd_obj.os_tenant_name = 'admin'
+            cmd_obj.make_op_env_val()
+            cmd_obj.cmd_exec()
+#        else:
     #        content = exec_rebuild(opbase_obj,instance_id)
-            cmd = cmd
+#            print 0
 
-            if cmd == "none":
-                print 0
-            else:
-                cmd_obj = comand_operation
-                cmd_obj.cmd_str = str(cmd)
-                cmd_obj.os_auth_url = 'http://192.168.249.197:35357/v2.0'
-                cmd_obj.os_username = 'admin'
-                cmd_obj.os_password = 'admin'
-                cmd_obj.os_tenant_name = 'admin'
-                cmd_obj.make_op_env_val()
-                cmd_obj.cmd_exec()
 
-    content = {
-                'massage': cmd_obj.cmd_out_std,
-                'err_massage': cmd_obj.cmd_err_std
-               }
+        content = {
+                    'massage': cmd_obj.cmd_out_std,
+                    'err_massage': cmd_obj.cmd_err_std
+                   }
 
     return JsonResponse(content)
 
