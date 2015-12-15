@@ -46,7 +46,7 @@ def exec_operation(req):
                     'err_massage': "operation is no command"
                    }
         elif cmd == "rebuild":
-            exec_rebuild(opbase_obj,instance_id)
+            content = exec_rebuild(opbase_obj,instance_id)
         else:
             cmd_obj = comand_operation
             cmd_obj.cmd_str = str(cmd)
