@@ -15,6 +15,7 @@ def exec_operation(req):
 
     opbase_obj = openstack_base
     opbase_obj.password = 'admin'
+    #opbase_obj.password = 'okinawa1940'
     opbase_obj.username = 'admin'
     opbase_obj.tenantname = 'admin'
 
@@ -41,7 +42,7 @@ def exec_operation(req):
 
         cmd = text_classifier.exec_tensor()
         #cmd = "rebuild"
-        
+
         if cmd == "none":
             content = {
                     'massage': "",

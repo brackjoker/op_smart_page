@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55f880e3-fe23-4af8-9d8d-8279f32514e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glance.py" afterPath="$PROJECT_DIR$/glance.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op_exec_create/op_exec_create.py" afterPath="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" afterPath="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op_get_info/op_get_info.py" afterPath="$PROJECT_DIR$/op_get_info/op_get_info.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nova.py" afterPath="$PROJECT_DIR$/nova.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" afterPath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
     </list>
     <ignored path="op_smart_page.iws" />
@@ -31,11 +27,21 @@
       <file leaf-file-name="artificial_intelligence_operations.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6103896">
-              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.58441556">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nova.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nova.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,7 +82,6 @@
         <option value="$PROJECT_DIR$/nova_gate/nova_exe.py" />
         <option value="$PROJECT_DIR$/neutron.py" />
         <option value="$PROJECT_DIR$/keystone.py" />
-        <option value="$PROJECT_DIR$/nova.py" />
         <option value="$PROJECT_DIR$/make_params.py" />
         <option value="$PROJECT_DIR$/flavor.py" />
         <option value="$PROJECT_DIR$/yoshida_kun/dumy_tensor_flow.py" />
@@ -93,6 +98,7 @@
         <option value="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" />
         <option value="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
         <option value="$PROJECT_DIR$/glance.py" />
+        <option value="$PROJECT_DIR$/nova.py" />
         <option value="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
       </list>
     </option>
@@ -417,11 +423,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="71" />
+      <option name="time" value="73" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="nova.server_all_info" />
+        <watch expression="resp" />
+        <watch expression="rest_res" />
       </configuration>
     </watches-manager>
   </component>
@@ -457,7 +464,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#47#57#0" expanded="true" />
+            <element signature="e#47#57#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -713,7 +720,7 @@
         <state vertical-scroll-proportion="2.34375">
           <caret line="75" column="26" selection-start-line="75" selection-start-column="26" selection-end-line="75" selection-end-column="26" />
           <folding>
-            <element signature="e#47#57#0" expanded="true" />
+            <element signature="e#47#57#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -790,14 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nova.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/op_exec_delete/op_exec_delete.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0064934">
@@ -806,10 +805,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nova.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6103896">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.58441556">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>

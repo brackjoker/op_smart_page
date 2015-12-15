@@ -63,7 +63,9 @@ class nova:
         resp, rest_res = h.request(url, 'POST', headers=headers, body=str(body))
 
         if "202" == resp.get("status"):
-            self.nova_rest_result = {"result":"success"}
+            rest_result = rest_res.decode(sys.stdin.encoding)
+            nova_result = json.loads(rest_result)
+            self.nova_rest_result = {"id":nova_result['server']['id'],"result":"success"}
         else:
             self.nova_rest_result = {"result":"fail"}
         #result_body_byt = rest_res
