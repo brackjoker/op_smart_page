@@ -13,6 +13,7 @@ class neutron:
     @classmethod
     def getlist(self,ops_base_obj):
 
+        print "get network info"
         url = 'http://'+ops_base_obj.openstack_ip+':9696/v2.0/networks'
         body = ''
         h = httplib2.Http(timeout=30)
