@@ -34,7 +34,7 @@ def exec_operation(req):
 
     if req.method == "POST":
         body_byt = req.body
-        print "request body:"+req.body
+        print "yoshida_kun request body:"+req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         instance_id = rest_obj['instance_id']
 #        if str(instance_id) != "" :

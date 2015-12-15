@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55f880e3-fe23-4af8-9d8d-8279f32514e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmd_op.py" afterPath="$PROJECT_DIR$/cmd_op.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glance.py" afterPath="$PROJECT_DIR$/glance.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nova.py" afterPath="$PROJECT_DIR$/nova.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op_exec_create/op_exec_create.py" afterPath="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/openstack_base.py" afterPath="$PROJECT_DIR$/openstack_base.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" afterPath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
     </list>
     <ignored path="op_smart_page.iws" />
@@ -33,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -51,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="glance.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="glance.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/glance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51502144">
+            <state vertical-scroll-proportion="0.0">
               <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding />
             </state>
@@ -65,16 +60,16 @@
         <entry file="file://$PROJECT_DIR$/op_exec_create/op_exec_create.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cmd_op.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="cmd_op.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmd_op.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.59227467">
               <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
               <folding />
             </state>
@@ -130,11 +125,11 @@
         <option value="$PROJECT_DIR$/op_get_info/op_get_info.py" />
         <option value="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" />
         <option value="$PROJECT_DIR$/openstack_base.py" />
-        <option value="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
         <option value="$PROJECT_DIR$/cmd_op.py" />
         <option value="$PROJECT_DIR$/nova.py" />
-        <option value="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
         <option value="$PROJECT_DIR$/glance.py" />
+        <option value="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
+        <option value="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
       </list>
     </option>
   </component>
@@ -804,37 +799,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmd_op.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nova.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="77" selection-start-line="84" selection-start-column="77" selection-end-line="84" selection-end-column="77" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/op_exec_create/op_exec_create.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,8 +817,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/glance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51502144">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/op_exec_create/op_exec_create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd_op.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59227467">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
           <folding />
         </state>
       </provider>

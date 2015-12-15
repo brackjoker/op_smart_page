@@ -20,7 +20,7 @@ def exec_create(req):
 
     if req.method == "POST":
         body_byt = req.body
-        print "request body:"+req.body
+        print "create request body:"+req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
 
         if rest_obj['node_type'] == "nova":
