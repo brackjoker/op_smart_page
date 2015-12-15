@@ -59,12 +59,10 @@ def exec_operation(req):
 #        else:
     #        content = exec_rebuild(opbase_obj,instance_id)
 #            print 0
-
-
-        content = {
-                    'massage': cmd_obj.cmd_out_std,
-                    'err_massage': cmd_obj.cmd_err_std
-                   }
+            content = {
+                        'massage': cmd_obj.cmd_out_std,
+                        'err_massage': cmd_obj.cmd_err_std
+                       }
 
     return JsonResponse(content)
 
