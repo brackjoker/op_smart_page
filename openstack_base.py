@@ -11,6 +11,7 @@ class openstack_base:
     tenantid = ''
     @classmethod
     def get_token(self):
+        print "request openstack token:"+self.openstack_ip
         url = 'http://'+self.openstack_ip+':5000/v2.0/tokens'
         body = '{"auth": {"tenantName": "' + str(self.tenantname) + '", "passwordCredentials": {"username": "'+ str(self.username)+'", "password": "'+str(self.password)+'"}}}'
         headers = {'Content-Type': 'application/json'}
@@ -26,6 +27,7 @@ class openstack_base:
     @classmethod
     def get_tenant_id(self):
 
+        print "get tenant id"
         url = 'http://'+self.openstack_ip+':5000/v2.0/tenants'
         body = ''
         #body = '{"auth": {"tenantName": "' + str(self.tenantname) + '", "passwordCredentials": {"username": "'+ str(self.username)+'", "password": "'+str(self.password)+'"}}}'

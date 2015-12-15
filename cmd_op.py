@@ -31,6 +31,8 @@ class comand_operation:
 
     @classmethod
     def cmd_exec(self):
+
+        print "exec command:"+self.cmd_str
         com = str(self.cmd_bf_str) + str(self.cmd_str) + str(self.cmd_af_str)
         print(com)
         self.cmd_res = subprocess.Popen(com, shell=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)

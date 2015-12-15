@@ -43,6 +43,7 @@ class nova:
     @classmethod
     def create_instance(self,ops_base_obj):
 
+        print "start create instance"
         url = 'http://'+ops_base_obj.openstack_ip+':8774/v2/'+ops_base_obj.tenantid+'/servers'
         body = '{' \
                '"server":{' \
@@ -66,8 +67,10 @@ class nova:
             rest_result = rest_res.decode(sys.stdin.encoding)
             nova_result = json.loads(rest_result)
             self.nova_rest_result = {"id":nova_result['server']['id'],"result":"success"}
+            print "create success id:"+str(nova_result['server']['id'])
         else:
             self.nova_rest_result = {"result":"fail"}
+            print "create fail"
         #result_body_byt = rest_res
         #result_body = result_body_byt.decode(sys.stdin.encoding)
         #self.nova_rest_result = json.loads(result_body)
@@ -82,8 +85,10 @@ class nova:
         resp, rest_res = h.request(url, 'DELETE', headers=headers, body=body)
         if "204" == resp.get("status"):
             self.nova_rest_result = {"server_name": self.server_name,"result":"success"}
+            print "delete fail name:"+self.server_name+" id:"+ops_base_obj.tenantid
         else:
             self.nova_rest_result = {"result":"fail"}
+            print "delete fail"
 #        result_body_byt = rest_res
 #        result_body = result_body_byt.decode(sys.stdin.encoding)
 #        self.nova_rest_result = json.loads(result_body)

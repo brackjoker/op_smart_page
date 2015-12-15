@@ -16,6 +16,7 @@ class glance:
         url = 'http://'+ops_base_obj.openstack_ip+':9292/v2/images'
         body = ''
         h = httplib2.Http(timeout=30)
+        print "get glance info"
         headers = {'X-Auth-Token': ops_base_obj.tokenid}
         resp, token = h.request(url, 'GET', headers=headers, body=body)
         token_body_byt = token
@@ -25,6 +26,7 @@ class glance:
 
     @classmethod
     def get_name(self,image_id):
+        print "get glance id" + image_id
         for server_list in self.server_all_info['images']:
             if str(server_list['id']) == image_id:
                 image_name = str(server_list['name'])

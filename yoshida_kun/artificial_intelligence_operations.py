@@ -34,6 +34,7 @@ def exec_operation(req):
 
     if req.method == "POST":
         body_byt = req.body
+        print "request body:"+req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         instance_id = rest_obj['instance_id']
 #        if str(instance_id) != "" :
@@ -44,13 +45,17 @@ def exec_operation(req):
         #cmd = "rebuild"
 
         if cmd == "none":
+            print "none operation"
             content = {
                     'massage': "",
                     'err_massage': "operation is no command"
                    }
         elif cmd == "rebuild":
+
+            print "exec rebuild operation"
             content = exec_rebuild(opbase_obj,instance_id)
         else:
+            print "exec command operation"
             cmd_obj = comand_operation
             cmd_obj.cmd_str = str(cmd)
             cmd_obj.os_auth_url = 'http://192.168.249.197:35357/v2.0'
