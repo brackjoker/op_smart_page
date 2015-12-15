@@ -18,10 +18,10 @@ def exec_operation(req):
     opbase_obj.tenantname = 'admin'
 
     opbase_obj.openstack_ip = '192.168.249.197'
-    #opbase_obj.get_token()
-    #opbase_obj.get_tenant_id()
+    opbase_obj.get_token()
+    opbase_obj.get_tenant_id()
 
-    target_flavor_id = ""
+    target_image_name = ""
     network_id = ""
     image_id = ""
     server_name = ""
@@ -45,6 +45,8 @@ def exec_operation(req):
                     'massage': "",
                     'err_massage': "operation is no command"
                    }
+        elif cmd == "rebuild":
+            exec_rebuild(opbase_obj,instance_id)
         else:
             cmd_obj = comand_operation
             cmd_obj.cmd_str = str(cmd)
@@ -83,19 +85,19 @@ def exec_rebuild(opbase_obj,instance_id):
             #tmp_data = server_list['flavor']
             #target_flavor_id = tmp_data["id"]
             tmp_data = server_list['image']
-            target_flavor_id = tmp_data["id"]
+            target_image_name = tmp_data["name"]
             break
-
-    #get flavor name
-    flavor_name = "m1.tiny"
 
     print "netwoekID serch function"
     net_name = "public"
 
     print "serch target flavor"
-    flavor_obj = flavor
-    flavor_obj.getlist(opbase_obj)
-    content = flavor_obj.server_all_info
+    #flavor_obj = flavor
+    #flavor_obj.getlist(opbase_obj)
+    #content = flavor_obj.server_all_info
+    #get flavor name
+    flavor_name = "m1.small"
+
 
     print "delete instance"
     params_obj.server_id = str(instance_id)
@@ -103,12 +105,12 @@ def exec_rebuild(opbase_obj,instance_id):
     nova_obj.delete_instance(opbase_obj)
 
     print "boot instance"
-    params_obj.create_value_get(nova_obj, flavor_name, image_name, net_name)
+    params_obj.create_value_get(nova_obj, flavor_name, target_image_name, net_name)
     nova_obj.server_name = str(params_obj)
     nova_obj.create_instance(opbase_obj)
     content = nova_obj.nova_rest_result
-    content = {
-                'instance_id': instance_id,
-                'massage': "rebuild sccess"
-               }
+#    content = {
+#                'instance_id': instance_id,
+#                'massage': "rebuild sccess"
+#               }
     return content
