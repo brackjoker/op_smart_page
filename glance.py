@@ -21,6 +21,15 @@ class glance:
         token_body_byt = token
         toke_body = token_body_byt.decode(sys.stdin.encoding)
         self.server_all_info = json.loads(toke_body)
+
+
+    @classmethod
+    def get_name(self,image_id):
+        for server_list in self.server_all_info['images']:
+            if str(server_list['id']) == image_id:
+                image_name = str(server_list['name'])
+                break
+        return image_name
 """
     def get_server_status(self,inst_name):
         inst_status = ""

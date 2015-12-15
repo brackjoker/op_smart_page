@@ -12,7 +12,9 @@ def exec_create(req):
     opbase_obj.username = 'admin'
     opbase_obj.tenantname = 'admin'
 
+    #opbase_obj.openstack_ip = '192.168.1.29'
     opbase_obj.openstack_ip = '192.168.249.197'
+
     opbase_obj.get_token()
     opbase_obj.get_tenant_id()
 
