@@ -52,7 +52,7 @@ def exec_delete(req):
             print 0
 
         else:
-            content = {"massage": "ERROR: none exec type"}
+            content = {"message": "ERROR: none exec type"}
 
     return JsonResponse(content)
 

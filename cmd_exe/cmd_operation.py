@@ -31,9 +31,9 @@ def ops_cmd_exec(req):
                     "command_result": res_str
                     }
         #else:
-        #    res_rest_obj = {"massage": "error not command"}
+        #    res_rest_obj = {"message": "error not command"}
     else:
-        res_rest_obj = {"massage": "error method"}
+        res_rest_obj = {"message": "error method"}
 
     return JsonResponse(res_rest_obj)
 

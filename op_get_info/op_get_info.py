@@ -54,7 +54,7 @@ def getlist(req):
             content = keystone_obj.server_all_info
 
         else:
-            content = {"massage": "ERROR: none info type"}
+            content = {"message": "ERROR: none info type"}
 
     return JsonResponse(content)
 

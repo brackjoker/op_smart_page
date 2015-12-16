@@ -36,7 +36,7 @@ def exec_operation(req):
         if rest_obj['instance_id'] == "null" or rest_obj['instance_id'] == "":
             if re.match(".* Failed to compute_task_build_instances: Timed out waiting for a reply to message ID .*" , str(rest_obj['message1'])) != None:
                 data_pool_obj.message1 = str(rest_obj['message1'])
-            elif re.match(".* Failed to compute_task_build_instances: No valid host was found\. There are not enough hosts available\.",str(rest_obj['message1'])):
+            elif re.match(".* Failed to compute_task_build_instances: No valid host was found\. There are not enough hosts available\.",str(rest_obj['message1'])) != None:
                 data_pool_obj.message1 = str(rest_obj['message1'])
 
             content = {}
@@ -147,6 +147,6 @@ def exec_rebuild(opbase_obj,instance_id):
     content = nova_obj.nova_rest_result
 #    content = {
 #                'instance_id': instance_id,
-#                'massage': "rebuild sccess"
+#                'message': "rebuild sccess"
 #               }
     return content

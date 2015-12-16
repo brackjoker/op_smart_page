@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55f880e3-fe23-4af8-9d8d-8279f32514e5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmd_exe/cmd_operation.py" afterPath="$PROJECT_DIR$/cmd_exe/cmd_operation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op_exec_create/op_exec_create.py" afterPath="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" afterPath="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/op_get_info/op_get_info.py" afterPath="$PROJECT_DIR$/op_get_info/op_get_info.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" afterPath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
     </list>
     <ignored path="op_smart_page.iws" />
@@ -23,13 +27,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="artificial_intelligence_operations.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="artificial_intelligence_operations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25974026">
-              <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+            <state vertical-scroll-proportion="-60.555557">
+              <caret line="149" column="20" selection-start-line="149" selection-start-column="20" selection-end-line="149" selection-end-column="20" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="op_exec_delete.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/op_exec_delete/op_exec_delete.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.555555">
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="op_get_info.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/op_get_info/op_get_info.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.555555">
+              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cmd_operation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cmd_exe/cmd_operation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.2068965">
+              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,23 +100,23 @@
         <option value="$PROJECT_DIR$/yoshida_kun/views.py" />
         <option value="$PROJECT_DIR$/openstack_csv/test1.csv" />
         <option value="$PROJECT_DIR$/text_classifier.py" />
-        <option value="$PROJECT_DIR$/cmd_exe/cmd_operation.py" />
         <option value="$PROJECT_DIR$/file_function.py" />
         <option value="$PROJECT_DIR$/openstack_csv/train.csv" />
         <option value="$PROJECT_DIR$/openstack_csv/train2.csv" />
         <option value="$PROJECT_DIR$/openstack_csv/classes.txt" />
-        <option value="$PROJECT_DIR$/op_get_info/op_get_info.py" />
-        <option value="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" />
         <option value="$PROJECT_DIR$/openstack_base.py" />
         <option value="$PROJECT_DIR$/cmd_op.py" />
         <option value="$PROJECT_DIR$/nova.py" />
         <option value="$PROJECT_DIR$/glance.py" />
-        <option value="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
         <option value="$PROJECT_DIR$/neutron.py" />
         <option value="$PROJECT_DIR$/op_smart_page/urls.py" />
         <option value="$PROJECT_DIR$/val_set/val_set.py" />
         <option value="$PROJECT_DIR$/data_pool.py" />
+        <option value="$PROJECT_DIR$/op_exec_create/op_exec_create.py" />
+        <option value="$PROJECT_DIR$/op_exec_delete/op_exec_delete.py" />
+        <option value="$PROJECT_DIR$/op_get_info/op_get_info.py" />
         <option value="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
+        <option value="$PROJECT_DIR$/cmd_exe/cmd_operation.py" />
       </list>
     </option>
   </component>
@@ -171,7 +207,49 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="op_get_info" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="op_smart_page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="op_smart_page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="op_exec_delete" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="op_smart_page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="op_smart_page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="op_exec_create" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="op_smart_page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="op_smart_page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmd_exe" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -672,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmd_exe/cmd_operation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0625">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/openstack_csv/classes.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4375">
@@ -690,13 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="16" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/op_exec_delete/op_exec_delete.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0064934">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -746,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/op_exec_create/op_exec_create.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21459228">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmd_op.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18181819">
@@ -766,14 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77922076">
           <caret line="25" column="61" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/op_get_info/op_get_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29220778">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -796,12 +844,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/op_exec_create/op_exec_create.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6551724">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25974026">
-          <caret line="38" column="94" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
+        <state vertical-scroll-proportion="-60.555557">
+          <caret line="149" column="20" selection-start-line="149" selection-start-column="20" selection-end-line="149" selection-end-column="20" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/op_exec_delete/op_exec_delete.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.555555">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/op_get_info/op_get_info.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.555555">
+          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd_exe/cmd_operation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2068965">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
