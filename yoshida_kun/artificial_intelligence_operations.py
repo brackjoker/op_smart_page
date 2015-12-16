@@ -44,7 +44,7 @@ def exec_operation(req):
             if data_pool_obj.massage1 != "":
                 #re_obj = re.compile("@hirahara-hubot: \[WARNING\] \[instance: (.*)\] (.*)")
                 #data_pool_obj.instance_id = re_obj.search(rest_obj['instance_id']).group(1)
-                data_pool_obj.instance_id = rest_obj['instance_id']
+                data_pool_obj.instance_id = str(rest_obj['instance_id'])
                 opbase_obj = openstack_base
                 opbase_obj.password = 'admin'
                 #opbase_obj.password = 'okinawa1940'
