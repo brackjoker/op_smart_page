@@ -35,9 +35,9 @@ def exec_operation(req):
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         if rest_obj['instance_id'] == "null" or rest_obj['instance_id'] == "":
             if re.match("@hirahara-hubot: \[WARNING\] Failed to compute_task_build_instances: Timed out waiting for a reply to message ID .*" , str(rest_obj['massage1'])) != None:
-                data_pool_obj.massage1 = str(rest_obj['massage1'])
+                data_pool_obj.massage1 = str(rest_obj['message1'])
             elif "@hirahara-hubot: [WARNING] Failed to compute_task_build_instances: No valid host was found. There are not enough hosts available." == str(rest_obj['massage1']):
-                data_pool_obj.massage1 = str(rest_obj['massage1'])
+                data_pool_obj.massage1 = str(rest_obj['message1'])
 
             content = {}
         else:

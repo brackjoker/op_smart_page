@@ -1,7 +1,7 @@
 class data_pool:
 
-    massage1 = ""
-    massage2 = ""
+    message1 = ""
+    message2 = ""
     instance_id = ""
 
     server_name = ""
