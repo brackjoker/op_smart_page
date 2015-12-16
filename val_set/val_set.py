@@ -39,15 +39,13 @@ def val_set(req):
 
 
 
-            if "@hirahara-hubot: [WARNING] Failed to compute_task_build_instances: No valid host was found. There are not enough hosts available." == str(rest_obj['message']):
+            if re.match(".* Failed to compute_task_build_instances: No valid host was found\. There are not enough hosts available\.",str(rest_obj['message1'])) != None:
                 print "match"
 
-            elif re.match("@hirahara-hubot: \[WARNING\] Failed to compute_task_build_instances: Timed out waiting for a reply to message ID (.*)" , str(rest_obj['message'])) != None:
+            elif re.match(".* Failed to compute_task_build_instances: Timed out waiting for a reply to message ID .*" , str(rest_obj['message1'])) != None:
                 re_obj = re.compile("@hirahara-hubot: \[WARNING\] Failed to compute_task_build_instances: Timed out waiting for a reply to message ID (.*)")
 
-
-
-                print "match2"+re_obj.search(str(rest_obj['message'])).group(1)
+                print "match2:"+re_obj.search(str(rest_obj['message1'])).group(1)
             else:
                 print "none match"
             content = {"message":"match"}

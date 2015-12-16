@@ -35,8 +35,10 @@ def exec_operation(req):
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         if rest_obj['instance_id'] == "null" or rest_obj['instance_id'] == "":
             if re.match(".* Failed to compute_task_build_instances: Timed out waiting for a reply to message ID .*" , str(rest_obj['message1'])) != None:
+                print "match1 : "+str(rest_obj['message1'])
                 data_pool_obj.message1 = str(rest_obj['message1'])
             elif re.match(".* Failed to compute_task_build_instances: No valid host was found\. There are not enough hosts available\.",str(rest_obj['message1'])) != None:
+                print "match1 : "+str(rest_obj['message2'])
                 data_pool_obj.message1 = str(rest_obj['message1'])
 
             content = {}
@@ -94,6 +96,8 @@ def exec_operation(req):
                                }
                 data_pool_obj.message1 = ""
                 data_pool_obj.instance_id = ""
+            else:
+                content = {}
 
     return JsonResponse(content)
 
