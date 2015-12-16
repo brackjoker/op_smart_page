@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55f880e3-fe23-4af8-9d8d-8279f32514e5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/val_set/val_set.py" afterPath="$PROJECT_DIR$/val_set/val_set.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" afterPath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
     </list>
     <ignored path="op_smart_page.iws" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="artificial_intelligence_operations.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74025977">
-              <caret line="45" column="90" selection-start-line="45" selection-start-column="90" selection-end-line="45" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.64285713">
+              <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -842,8 +840,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74025977">
-          <caret line="45" column="90" selection-start-line="45" selection-start-column="90" selection-end-line="45" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.64285713">
+          <caret line="46" column="44" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
