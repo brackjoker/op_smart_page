@@ -80,12 +80,12 @@ def exec_operation(req):
                             'message': "",
                             'err_message': "operation is no command"
                            }
-                elif cmd == "rebuild" and data_pool_obj.rebuild_flag:
+                elif cmd == "rebuild" and data_pool_obj.rebuild_flag == True:
 
                     print "exec rebuild operation"
                     content = exec_rebuild(opbase_obj,instance_id)
                     data_pool_obj.rebuild_flag = False
-                elif data_pool_obj.cmd_exe_flag:
+                elif data_pool_obj.cmd_exe_flag == True:
                     print "exec command operation"
                     cmd_obj = comand_operation
                     cmd_obj.cmd_str = str(cmd)
@@ -103,10 +103,15 @@ def exec_operation(req):
                                 'err_message': cmd_obj.cmd_err_std
                                }
                     data_pool_obj.cmd_exe_flag = False
+                else:
+
+                    content = {}
+
+                    print 0
                 data_pool_obj.message1 = ""
                 data_pool_obj.instance_id = ""
             else:
-                content = {'message':'no operation','err_message':''}
+                content = {}
 
     return JsonResponse(content)
 
