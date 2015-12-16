@@ -49,7 +49,7 @@ def exec_operation(req):
             elif re.match(".* Failed to compute_task_build_instances: No valid host was found\. There are not enough hosts available\.",str(rest_obj['message1'])) != None:
                 print "match1 : "+str(rest_obj['message2'])
                 data_pool_obj.message1 = str(rest_obj['message1'])
-                
+
             if data_pool_obj.message1 != "":
                 #re_obj = re.compile("@hirahara-hubot: \[WARNING\] \[instance: (.*)\] (.*)")
                 #data_pool_obj.instance_id = re_obj.search(rest_obj['instance_id']).group(1)
@@ -80,11 +80,12 @@ def exec_operation(req):
                             'message': "",
                             'err_message': "operation is no command"
                            }
-                elif cmd == "rebuild":
+                elif cmd == "rebuild" and data_pool_obj.rebuild_flag:
 
                     print "exec rebuild operation"
                     content = exec_rebuild(opbase_obj,instance_id)
-                else:
+                    data_pool_obj.rebuild_flag = False
+                elif data_pool_obj.cmd_exe_flag:
                     print "exec command operation"
                     cmd_obj = comand_operation
                     cmd_obj.cmd_str = str(cmd)
@@ -101,6 +102,7 @@ def exec_operation(req):
                                 'message': cmd_obj.cmd_out_std,
                                 'err_message': cmd_obj.cmd_err_std
                                }
+                    data_pool_obj.cmd_exe_flag = False
                 data_pool_obj.message1 = ""
                 data_pool_obj.instance_id = ""
             else:
