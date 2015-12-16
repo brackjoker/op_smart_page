@@ -68,8 +68,8 @@ def exec_operation(req):
                 if cmd == "none":
                     print "none operation"
                     content = {
-                            'massage': "",
-                            'err_massage': "operation is no command"
+                            'message': "",
+                            'err_message': "operation is no command"
                            }
                 elif cmd == "rebuild":
 
@@ -89,10 +89,10 @@ def exec_operation(req):
             #        content = exec_rebuild(opbase_obj,instance_id)
         #            print 0
                     content = {
-                                'massage': cmd_obj.cmd_out_std,
+                                'message': cmd_obj.cmd_out_std,
                                 'err_massage': cmd_obj.cmd_err_std
                                }
-                data_pool_obj.massage1 = ""
+                data_pool_obj.message1 = ""
                 data_pool_obj.instance_id = ""
 
     return JsonResponse(content)
