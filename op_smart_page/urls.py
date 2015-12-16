@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     url(r'^op_exec_delete/$', 'op_exec_delete.op_exec_delete.exec_delete', name='op_exec_delete'),
     url(r'^yoshida_kun/$', 'yoshida_kun.artificial_intelligence_operations.exec_operation', name='yoshida_kun'),
     url(r'^cmd_op/$', 'cmd_exe.cmd_operation.ops_cmd_exec', name='cmd_op'),
+    url(r'^val_op/$', 'val_set.val_set.val_set', name='val_op'),
 )
 
 """
