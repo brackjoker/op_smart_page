@@ -34,14 +34,14 @@ def exec_operation(req):
         print "yoshida_kun request body:"+req.body
         rest_obj = json.loads(body_byt.decode(sys.stdin.encoding))
         if rest_obj['instance_id'] == "null" or rest_obj['instance_id'] == "":
-            if re.match("@hirahara-hubot: \[WARNING\] Failed to compute_task_build_instances: Timed out waiting for a reply to message ID .*" , str(rest_obj['massage1'])) != None:
-                data_pool_obj.massage1 = str(rest_obj['message1'])
-            elif "@hirahara-hubot: [WARNING] Failed to compute_task_build_instances: No valid host was found. There are not enough hosts available." == str(rest_obj['massage1']):
-                data_pool_obj.massage1 = str(rest_obj['message1'])
+            if re.match("@hirahara-hubot: \[WARNING\] Failed to compute_task_build_instances: Timed out waiting for a reply to message ID .*" , str(rest_obj['message1'])) != None:
+                data_pool_obj.message1 = str(rest_obj['message1'])
+            elif "@hirahara-hubot: [WARNING] Failed to compute_task_build_instances: No valid host was found. There are not enough hosts available." == str(rest_obj['message1']):
+                data_pool_obj.message1 = str(rest_obj['message1'])
 
             content = {}
         else:
-            if data_pool_obj.massage1 != "":
+            if data_pool_obj.message1 != "":
                 #re_obj = re.compile("@hirahara-hubot: \[WARNING\] \[instance: (.*)\] (.*)")
                 #data_pool_obj.instance_id = re_obj.search(rest_obj['instance_id']).group(1)
                 data_pool_obj.instance_id = str(rest_obj['instance_id'])
@@ -60,7 +60,7 @@ def exec_operation(req):
                 instance_id = data_pool_obj.instance_id
         #        if str(instance_id) != "" :
 
-                file_function.make_tensor_file(str(data_pool_obj.massage1))
+                file_function.make_tensor_file(str(data_pool_obj.message1))
 
                 cmd = text_classifier.exec_tensor()
                 #cmd = "rebuild"
@@ -90,7 +90,7 @@ def exec_operation(req):
         #            print 0
                     content = {
                                 'message': cmd_obj.cmd_out_std,
-                                'err_massage': cmd_obj.cmd_err_std
+                                'err_message': cmd_obj.cmd_err_std
                                }
                 data_pool_obj.message1 = ""
                 data_pool_obj.instance_id = ""
