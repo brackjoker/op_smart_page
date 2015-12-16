@@ -43,6 +43,13 @@ def exec_operation(req):
 
             content = {}
         else:
+            if re.match(".* Failed to compute_task_build_instances: Timed out waiting for a reply to message ID .*" , str(rest_obj['message1'])) != None:
+                print "match1 : "+str(rest_obj['message1'])
+                data_pool_obj.message1 = str(rest_obj['message1'])
+            elif re.match(".* Failed to compute_task_build_instances: No valid host was found\. There are not enough hosts available\.",str(rest_obj['message1'])) != None:
+                print "match1 : "+str(rest_obj['message2'])
+                data_pool_obj.message1 = str(rest_obj['message1'])
+                
             if data_pool_obj.message1 != "":
                 #re_obj = re.compile("@hirahara-hubot: \[WARNING\] \[instance: (.*)\] (.*)")
                 #data_pool_obj.instance_id = re_obj.search(rest_obj['instance_id']).group(1)
@@ -88,7 +95,7 @@ def exec_operation(req):
                     cmd_obj.make_op_env_val()
                     cmd_obj.cmd_exec()
         #        else:
-            #        content = exec_rebuild(opbase_obj,instance_id)
+        #            content = exec_rebuild(opbase_obj,instance_id)
         #            print 0
                     content = {
                                 'message': cmd_obj.cmd_out_std,
@@ -97,7 +104,7 @@ def exec_operation(req):
                 data_pool_obj.message1 = ""
                 data_pool_obj.instance_id = ""
             else:
-                content = {}
+                content = {'message':'no operation','err_message':''}
 
     return JsonResponse(content)
 
