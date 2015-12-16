@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55f880e3-fe23-4af8-9d8d-8279f32514e5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/val_set/val_set.py" afterPath="$PROJECT_DIR$/val_set/val_set.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" afterPath="$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py" />
     </list>
     <ignored path="op_smart_page.iws" />
@@ -26,8 +28,8 @@
       <file leaf-file-name="artificial_intelligence_operations.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2857143">
-              <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.74025977">
+              <caret line="45" column="90" selection-start-line="45" selection-start-column="90" selection-end-line="45" selection-end-column="90" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -48,8 +50,8 @@
       <file leaf-file-name="val_set.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/val_set/val_set.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.333333">
-              <caret line="39" column="175" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="175" />
+            <state vertical-scroll-proportion="-11.666667">
+              <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="36" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -830,8 +832,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/val_set/val_set.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.333333">
-          <caret line="39" column="175" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="175" />
+        <state vertical-scroll-proportion="-11.666667">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="36" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
@@ -840,8 +842,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yoshida_kun/artificial_intelligence_operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2857143">
-          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.74025977">
+          <caret line="45" column="90" selection-start-line="45" selection-start-column="90" selection-end-line="45" selection-end-column="90" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
